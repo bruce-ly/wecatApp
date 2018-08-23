@@ -1,0 +1,5 @@
+<!--pages/give/give.wxml-->
+<view class='weui-article'>
+  <view class='weui-article__h1'>打赏请备注姓名：</view>
+  <image mode='aspectFit' bindtap='fnImage' src='./give.jpg'></image>
+</view>

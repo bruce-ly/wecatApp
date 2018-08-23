@@ -1,0 +1,7 @@
+/**app.wxss**/
+@import 'weui.wxss';
+
+.weui-article__p {
+  text-align: justify;
+  text-indent: 2em;
+}

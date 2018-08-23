@@ -1,0 +1,17 @@
+/**index.wxss**/
+
+image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin: 20rpx;
+  vertical-align: middle;
+}
+
+navigator:nth-of-type(2n) {
+  background: #333;
+}
+
+navigator:nth-of-type(2n) .weui-grid__label {
+  color: #fff;
+}

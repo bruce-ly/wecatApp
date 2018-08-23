@@ -1,0 +1,36 @@
+<!--pages/cookbook_cont/cookbook_cont.wxml-->
+<view class='weui-article'>
+  <view class='weui-article__h1'>{{cont.name}}</view>
+  <image src='{{cont.pic}}'></image>
+  <view class='table_y'>
+    <view class='weui-flex'>
+      <view class='weui-flex__item'>用餐人数</view>
+      <view class='weui-flex__item'>{{cont.peoplenum}}</view>
+    </view>
+    <view class='weui-flex'>
+      <view class='weui-flex__item'>烹饪时间</view>
+      <view class='weui-flex__item'>{{cont.preparetime}}</view>
+    </view>
+    <view class='weui-flex'>
+      <view class='weui-flex__item'>标签</view>
+      <view class='weui-flex__item'>{{cont.tag}}</view>
+    </view>
+  </view>
+  <view class='weui-article__p'>{{content}}</view>
+  <view class='table_x'>
+    <view class='weui-flex'>
+      <view class='weui-flex__item'>材料</view>
+      <view class='weui-flex__item'>用量</view>
+    </view>
+    <block wx:for='{{cont.material}}' wx:key='m{{index}}'>
+      <view class='weui-flex'>
+        <view class='weui-flex__item'>{{item.mname}}</view>
+        <view class='weui-flex__item'>{{item.amount}}</view>
+      </view>
+    </block>
+  </view>
+  <block wx:for='{{cont.process}}' wx:key='p{{index}}'>
+    <image src='{{item.pic}}'></image>
+    <view class='weui-article__p'>{{item.pcontent}}</view>
+  </block>
+</view>

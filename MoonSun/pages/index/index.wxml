@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view>
+  <view>
+    <button wx:if='{{!hasUserInfo && canIUse}}' open-type='getUserInfo' bindgetuserinfo='getUserInfo'> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap='bindViewTap' src='{{userInfo.avatarUrl}}'></image>
+      <text>欢迎您：{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class='weui-grids'>
+    <navigator url='../cookbook/cookbook' class='weui-grid' hover-class='weui-grid_active'>
+      <image class='weui-grid__icon' src='{{userInfo.avatarUrl}}'></image>
+      <view class='weui-grid__label'>找菜谱</view>
+    </navigator>
+    <navigator url='../give/give' class='weui-grid' hover-class='weui-grid_active'>
+      <image class='weui-grid__icon' src='{{userInfo.avatarUrl}}'></image>
+      <view class='weui-grid__label'>打赏我</view>
+    </navigator>
+    <navigator url='../my/my' class='weui-grid' hover-class='weui-grid_active'>
+      <image class='weui-grid__icon' src='{{userInfo.avatarUrl}}'></image>
+      <view class='weui-grid__label'>关于我</view>
+    </navigator>
+  </view>
+  <view class='weui-footer weui-footer_fixed-bottom'>
+    <view class='weui-footer__links'>
+      <navigator url='' class='weui-footer__link'>月阳</navigator>
+    </view>
+    <view class='weui-footer__text'>Copyright © www.l-y.win</view>
+  </view>
+</view>
