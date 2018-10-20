@@ -1,5 +1,0 @@
-/* pages/cookbook/cookbook.wxss */
-
-scroll-view {
-  height: 90vh;
-}
